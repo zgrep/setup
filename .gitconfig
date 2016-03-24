@@ -3,3 +3,5 @@
 [user]
 	name = zgrep
 	email = gzipgrep@gmail.com
+[push]
+	default = simple
