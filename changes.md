@@ -153,5 +153,6 @@
 - VMWare Fusion
 	- 9front, "my memory of drawterm is fading"
 	- Redox OS, currently broken
+	- Windows 10
 - multirust
 	- Nightly install by default.
