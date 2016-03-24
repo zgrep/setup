@@ -14,5 +14,5 @@ alias ls='ls -aG'
 
 # Editor variables and alias.
 export EDITOR='subl'
-export VISUAL="$EDITOR"
+export VISUAL='subl -w'
 alias e="$EDITOR"

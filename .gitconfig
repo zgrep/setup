@@ -1,0 +1,5 @@
+# ~/.gitconfig
+
+[user]
+	name = zgrep
+	email = gzipgrep@gmail.com
