@@ -1,0 +1,157 @@
+# Changes
+
+- System Preferences
+	- Energy Saver -> Schedule -> Restart Every Day at 12:00 AM.
+	- Keyboard
+		- [off] Adjust keyboard brightness in low light.
+		- Also dimmed the keys.
+		- Text -> Removed shortcut.
+		- Text -> Disabled smart quotes and dashes.
+		- Input Sources -> Add Russian, Dvorak, remove US.
+	- Trackpad
+		- Point & Click -> Secondary click in bottom right corner.
+		- Scroll & Zoom -> Uncheck everything.
+		- More gestures
+			- [off] swipe between pages
+			- [off] Notification Center
+			- [off] Launchpad
+			- [off] Show Desktop
+	- General
+		- Appearance: Graphite
+		- Highlight color: Graphite
+		- Sidebar icon size: Small
+		- Show scroll bars: Always
+		- Click in the scroll bar to: jump to the spot that's clicked.
+		- Default web browser: Firefox
+		- [off] Allow Handoff
+	- Langauge & Region
+		- Preferred languages: English, Russian
+		- Time format: [on] 24-hour-time
+		- Advanced
+			- General -> Numbers -> Grouping: [space]
+			- General -> Currency -> Grouping: [space]
+			- General -> Measurement units: Metric
+			- Dates -> Short: 2016-01-05
+			- Dates -> Medium: 2016-01-05
+			- Dates -> Long: 2016-01-05
+			- Dates -> Full: Tuesday 2016-01-05
+	- Security & Privacy
+		- Require password immediately after sleep...
+		- FileVault: On, with recovery key.
+		- Firewall: On.
+			- Options -> [off] Automatically allow signed.
+			- Options -> [on] Stealth mode.
+		- Privacy -> Accessibility
+			- [on] ShiftIt
+		- Advanced -> [on] Require an administrator...
+	- Displays
+		- Scaled -> 3rd option
+		- [off] Automatically adjust brightness
+	- Bluetooth
+		- Turn Off
+		- Advanced -> [off] Open Bluetooth Setup assistant... [both of them].
+	- Networks -> Advanced -> WiFi -> [off] Remember Networks I have joined
+	- Extensions
+		- Share menu: Uncheck all.
+		- Widgets: Uncheck all.
+	- Date & time
+		- Date & time -> [on] set date and time automatically: time.nist.gov
+		- Clock -> [on] Display time with seconds.
+		- Clock -> [on] Show date.
+	- Accessibility -> Display
+		- [on] Reduce transparency
+		- [off] Shake mouse pointer to locate
+	- Dock
+		- Size: Around 30%?
+		- Position: Left.
+		- Minimize using: Scale effect.
+		- [off] double click a window's title bar
+		- [on] minimize windows into application icon
+		- [off] animate opening applications
+		- [off] show indicators for open applications
+	- Mission Control
+		- [off] Automatically rearrange spaces.
+		- Shortcuts -> Remove all, except "Mission Control: ^↑".
+	- Spotlight -> [off] Bing web searches.
+	- Sharing -> Computer Name: laptop
+- Dock -> Remove all applications, launchpad, everything but Trash and Finder, from dock.
+- Firewall
+	- Allow
+		- netbiosd
+		- Mathematica
+		- Mathematica's Kernel
+	- Deny
+- Homebrew
+	- Install
+		- https://developer.apple.com/downloads/ -> "Command Line Tools"
+		- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+		- Edit `/etc/manpaths` to put local above the regular.
+	- `brew install caskroom/cask/brew-cask && brew rm brew-cask`.
+	- `brew cask install`
+		- `vmware-fusion`
+		- `seil`
+		- `firefox`
+		- `caskroom/versions/sublime-text3`
+		- `shiftit`
+		- `the-unarchiver`
+		- `nimbus`
+	- `brew install`
+		- `multirust`
+		- `rc`
+		- `homebrew/dupes/openssh --with-libressl --without-openssl`
+- Finder -> Preferences
+	- General
+		- Show these items on desktop: uncheck all
+		- New Finder windows show: ~/
+	- Tags -> Show these tags in sidebar: uncheck all
+	- Sidebar: Enable the following, disable the rest:
+		- Applications
+		- Documents
+		- Downloads
+		- ~/
+		- Connected servers
+		- Bonjour computers
+		- Macbook Pro
+		- Hard disks
+		- External disks
+		- CDs, DVDs, and iPods
+	- Advanced:
+		- [on] Show all filename extensions.
+		- [off] show warning before changing an extension
+- Seil
+	- Caps lock to escape, change it to code 53
+- Firefox
+	- General -> [off] always check if firefox is my default browser
+	- General -> When starts show: blank page
+	- Content -> Fonts & Colors -> Advanced
+		- For: Latin
+		- Proportional: Serif
+		- Prop Size: 16
+		- Serif: Merriweather Light
+		- Sans: Fira Sans
+		- Mono: Fira Mono
+		- Mono Size: 16
+	- Search engine -> DuckDuckGo, delete the rest
+	- Privacy -> Never remember history
+	- Advanced
+		- General -> [on] Warn me when websites try to redirect the page
+		- Data choices -> Uncheck all.
+	- New Tab -> Gear icon -> show blank page
+	- UI Customize: URL, Search, Downloads, Forget, sandwich thing I cannot remove
+	- Addons
+		- uBlock Origin
+			- 3rd-party: Check all, except "Regions, languages"
+- Menu Bar
+	- Battery -> [on] Show Percentage
+- Mathematica
+	- Also extras.
+- Fonts
+	- Fira Mono
+	- Fira Sans
+	- Merriweather Light
+	- FYI: neoletters http://www.orenwatson.be/fontdemo.htm
+- VMWare Fusion
+	- 9front, "my memory of drawterm is fading"
+	- Redox OS, currently broken
+- multirust
+	- Nightly install by default.
