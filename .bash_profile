@@ -16,3 +16,5 @@ alias ls='ls -aG'
 export EDITOR='subl'
 export VISUAL='subl -w'
 alias e="$EDITOR"
+
+source ~/.bash_profile_secret
