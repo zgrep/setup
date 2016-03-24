@@ -1,0 +1,11 @@
+# ~/.ssh/config
+
+Host github
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/github
+
+Host vps
+	HostName zgrep.org
+	User zgrep
+	IdentityFile ~/.ssh/vps

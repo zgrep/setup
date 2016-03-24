@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-f=`ls -a | grep -vE '^(symlink\.sh|\.|\.\.|\.gitignore|\.git|.*\.md)$'`
+# Get all files.
+f=`ls -ap | grep -vE '\.md|/$|^symlink\.sh$|^\.gitignore$'`
 
 for a in $f; do
 	b=`sed '1q' "$a"`; b="${b#* }"; b="${b//\~/$HOME}"
