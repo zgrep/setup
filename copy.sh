@@ -12,7 +12,7 @@ for a in $f; do
 	# Remove if it exists.
 	if [[ -e "$b" ]]; then rm "$b"; fi;
 	# Hey, I wanna see what it's doing! :P
-	echo "cp $a $b";
+	echo "cp '$a' '$b'";
 	# Copies the file over. For symlinks, replace 'cp' with 'ln -s'.
 	cp "$a" "$b";
 done;
