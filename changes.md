@@ -152,7 +152,14 @@
 	- FYI: neoletters http://www.orenwatson.be/fontdemo.htm
 - VMWare Fusion
 	- 9front, "my memory of drawterm is fading"
-	- Redox OS, currently broken
+	- Redox OS: Also the bootstrap script installed some stuff via homebrew, so I've got that.
 	- Windows 10
 - multirust
 	- Nightly install by default.
+- Sublime Text 3 -> Installed Packages
+	- Package Control
+	- Rust
+	- Git
+	- Fix Mac Path
+	- Terminal
+	- Theme - Spacegray

@@ -17,4 +17,8 @@ export EDITOR='subl'
 export VISUAL='subl -w'
 alias e="$EDITOR"
 
+# PATH manipulations: rust nightly installed things
+export PATH="$PATH:~/.multirust/toolchains/nightly/cargo/bin"
+
+# For secrets and whatnot.
 source ~/.bash_profile_secret
