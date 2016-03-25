@@ -99,7 +99,6 @@
 		- `multirust`
 		- `rc`
 		- `homebrew/dupes/openssh --with-libressl --without-openssl`
-		- `sevki/gcc_cross_compilers/x86_64-elf-gcc`
 - Finder -> Preferences
 	- General
 		- Show these items on desktop: uncheck all
