@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Get all files.
-f=`ls -ap | grep -vE '\.md$|/$|^symlink\.sh$|^\.gitignore$'`;
+f=`ls -ap | grep -vE '\.md$|/$|^copy\.sh$|^\.gitignore$'`;
 
 # For each file:
 for a in $f; do
@@ -9,11 +9,10 @@ for a in $f; do
 	b=`sed '1q' "$a"`; b="${b#* }"; b="${b//\~/$HOME}";
 	# Get full path to it.
 	a=`pwd`/"$a";
-	# Hey, I wanna see what it's doing! :P
-	echo "$b -> $a";
 	# Remove if it exists.
 	if [[ -e "$b" ]]; then rm "$b"; fi;
-	# Create symlink. If you want it to copy, modify this line.
-	# Goes from $a, the local file, to $b, where we want it to go.
-	ln -s "$a" "$b";
+	# Hey, I wanna see what it's doing! :P
+	echo "cp $a $b";
+	# Copies the file over. For symlinks, replace 'cp' with 'ln -s'.
+	cp "$a" "$b";
 done;

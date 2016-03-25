@@ -15,12 +15,12 @@ fn prompt {
 }
 
 # Colored ls that shows hidden files.
-fn ls { builtin ls -aG }
+fn ls { builtin ls -aG $* }
 
 # Editor variables and alias.
 EDITOR = 'subl'
 VISUAL = 'subl -w'
-fn e { $EDITOR }
+fn e { $EDITOR $* }
 
 # path manipulations: set it, add rust
 path = ( `{ cat /etc/paths } $home/.multirust/toolchains/nightly/cargo/bin )
