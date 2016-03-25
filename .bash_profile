@@ -9,7 +9,7 @@ export PS1='$([ $? == 0 ] || echo "\[\033[0;31m\]$? ")\[\033[0;34m\]\u@\H \[\033
 # Makes it look nice.
 export PS2='$(expr \! - 1 | tr '1234567890' '.').. '
 
-# Colored ls
+# Colored ls that shows hidden files.
 alias ls='ls -aG'
 
 # Editor variables and alias.

@@ -99,6 +99,7 @@
 		- `multirust`
 		- `rc`
 		- `homebrew/dupes/openssh --with-libressl --without-openssl`
+		- `sevki/gcc_cross_compilers/x86_64-elf-gcc`
 - Finder -> Preferences
 	- General
 		- Show these items on desktop: uncheck all
@@ -149,10 +150,9 @@
 	- Fira Mono
 	- Fira Sans
 	- Merriweather Light
-	- FYI: neoletters http://www.orenwatson.be/fontdemo.htm
 - VMWare Fusion
 	- 9front, "my memory of drawterm is fading"
-	- Redox OS: Also the bootstrap script installed some stuff via homebrew, so I've got that.
+	- Redox OS
 	- Windows 10
 - multirust
 	- Nightly install by default.
