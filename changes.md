@@ -3,7 +3,7 @@
 - System Preferences
 	- Energy Saver -> Schedule -> Restart Every Day at 12:00 AM.
 	- Keyboard
-		- [off] Adjust keyboard brightness in low light.
+		- [ ] Adjust keyboard brightness in low light.
 		- Also dimmed the keys.
 		- Text -> Removed shortcut.
 		- Text -> Disabled smart quotes and dashes.
@@ -12,10 +12,10 @@
 		- Point & Click -> Secondary click in bottom right corner.
 		- Scroll & Zoom -> Uncheck everything.
 		- More gestures
-			- [off] swipe between pages
-			- [off] Notification Center
-			- [off] Launchpad
-			- [off] Show Desktop
+			- [ ] swipe between pages
+			- [ ] Notification Center
+			- [ ] Launchpad
+			- [ ] Show Desktop
 	- General
 		- Appearance: Graphite
 		- Highlight color: Graphite
@@ -23,10 +23,10 @@
 		- Show scroll bars: Always
 		- Click in the scroll bar to: jump to the spot that's clicked.
 		- Default web browser: Firefox
-		- [off] Allow Handoff
+		- [ ] Allow Handoff
 	- Langauge & Region
 		- Preferred languages: English, Russian
-		- Time format: [on] 24-hour-time
+		- Time format: [x] 24-hour-time
 		- Advanced
 			- General -> Numbers -> Grouping: [space]
 			- General -> Currency -> Grouping: [space]
@@ -39,40 +39,40 @@
 		- Require password immediately after sleep...
 		- FileVault: On, with recovery key.
 		- Firewall: On.
-			- Options -> [off] Automatically allow signed.
-			- Options -> [on] Stealth mode.
+			- Options -> [ ] Automatically allow signed.
+			- Options -> [x] Stealth mode.
 		- Privacy -> Accessibility
-			- [on] ShiftIt
-		- Advanced -> [on] Require an administrator...
+			- [x] ShiftIt
+		- Advanced -> [x] Require an administrator...
 	- Displays
 		- Scaled -> 3rd option
-		- [off] Automatically adjust brightness
+		- [ ] Automatically adjust brightness
 	- Bluetooth
 		- Turn Off
-		- Advanced -> [off] Open Bluetooth Setup assistant... [both of them].
-	- Networks -> Advanced -> WiFi -> [off] Remember Networks I have joined
+		- Advanced -> [ ] Open Bluetooth Setup assistant... [both of them].
+	- Networks -> Advanced -> WiFi -> [ ] Remember Networks I have joined
 	- Extensions
 		- Share menu: Uncheck all.
 		- Widgets: Uncheck all.
 	- Date & time
-		- Date & time -> [on] set date and time automatically: time.nist.gov
-		- Clock -> [on] Display time with seconds.
-		- Clock -> [on] Show date.
+		- Date & time -> [x] set date and time automatically: time.nist.gov
+		- Clock -> [x] Display time with seconds.
+		- Clock -> [x] Show date.
 	- Accessibility -> Display
-		- [on] Reduce transparency
-		- [off] Shake mouse pointer to locate
+		- [x] Reduce transparency
+		- [ ] Shake mouse pointer to locate
 	- Dock
 		- Size: Around 30%?
 		- Position: Left.
 		- Minimize using: Scale effect.
-		- [off] double click a window's title bar
-		- [on] minimize windows into application icon
-		- [off] animate opening applications
-		- [off] show indicators for open applications
+		- [ ] double click a window's title bar
+		- [x] minimize windows into application icon
+		- [ ] animate opening applications
+		- [ ] show indicators for open applications
 	- Mission Control
-		- [off] Automatically rearrange spaces.
+		- [ ] Automatically rearrange spaces.
 		- Shortcuts -> Remove all, except "Mission Control: ^↑".
-	- Spotlight -> [off] Bing web searches.
+	- Spotlight -> [ ] Bing web searches.
 	- Sharing -> Computer Name: laptop
 - Dock -> Remove all applications, launchpad, everything but Trash and Finder, from dock.
 - Firewall
@@ -98,7 +98,11 @@
 	- `brew install`
 		- `multirust`
 		- `rc`
+		- `python`
 		- `homebrew/dupes/openssh --with-libressl --without-openssl`
+		- `gnupg`
+		- `qemu`
+	- See [Redox](#redox) as well.
 - Finder -> Preferences
 	- General
 		- Show these items on desktop: uncheck all
@@ -116,12 +120,12 @@
 		- External disks
 		- CDs, DVDs, and iPods
 	- Advanced:
-		- [on] Show all filename extensions.
-		- [off] show warning before changing an extension
+		- [x] Show all filename extensions.
+		- [ ] show warning before changing an extension
 - Seil
 	- Caps lock to escape, change it to code 53
 - Firefox
-	- General -> [off] always check if firefox is my default browser
+	- General -> [ ] always check if firefox is my default browser
 	- General -> When starts show: blank page
 	- Content -> Fonts & Colors -> Advanced
 		- For: Latin
@@ -134,7 +138,7 @@
 	- Search engine -> DuckDuckGo, delete the rest
 	- Privacy -> Never remember history
 	- Advanced
-		- General -> [on] Warn me when websites try to redirect the page
+		- General -> [x] Warn me when websites try to redirect the page
 		- Data choices -> Uncheck all.
 	- New Tab -> Gear icon -> show blank page
 	- UI Customize: URL, Search, Downloads, Forget, sandwich thing I cannot remove
@@ -142,7 +146,7 @@
 		- uBlock Origin
 			- 3rd-party: Check all, except "Regions, languages"
 - Menu Bar
-	- Battery -> [on] Show Percentage
+	- Battery -> [x] Show Percentage
 - Mathematica
 	- Also extras.
 - Fonts
@@ -151,10 +155,12 @@
 	- Merriweather Light
 - VMWare Fusion
 	- 9front, "my memory of drawterm is fading"
-	- Redox OS
+	- [Redox OS](http://redox-os.org)
 	- Windows 10
+		- I eagerly await [No Man's Sky](http://www.no-mans-sky.com/).
+	- OpenBSD 5.8
 - multirust
-	- Nightly install by default.
+	- `multirust default nightly`
 - Sublime Text 3 -> Installed Packages
 	- Package Control
 	- Rust
@@ -162,3 +168,11 @@
 	- Fix Mac Path
 	- Terminal
 	- Theme - Spacegray
+- `cargo install`
+	- `rustfmt`
+	- `ion-shell`
+- Redox
+	- `git clone github:redox-os/redox.git --origin upstream --recursive`
+	- `brew install 
+- Misc
+	- `defaults write com.apple.desktopservices DSDontWriteNetworkStores true` to remove pesky `.DS_Store` files
