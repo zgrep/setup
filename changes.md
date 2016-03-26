@@ -3,7 +3,7 @@
 - System Preferences
 	- Energy Saver -> Schedule -> Restart Every Day at 12:00 AM.
 	- Keyboard
-		- [ ] Adjust keyboard brightness in low light.
+		- [off] Adjust keyboard brightness in low light.
 		- Also dimmed the keys.
 		- Text -> Removed shortcut.
 		- Text -> Disabled smart quotes and dashes.
@@ -12,10 +12,10 @@
 		- Point & Click -> Secondary click in bottom right corner.
 		- Scroll & Zoom -> Uncheck everything.
 		- More gestures
-			- [ ] swipe between pages
-			- [ ] Notification Center
-			- [ ] Launchpad
-			- [ ] Show Desktop
+			- [off] swipe between pages
+			- [off] Notification Center
+			- [off] Launchpad
+			- [off] Show Desktop
 	- General
 		- Appearance: Graphite
 		- Highlight color: Graphite
@@ -23,10 +23,10 @@
 		- Show scroll bars: Always
 		- Click in the scroll bar to: jump to the spot that's clicked.
 		- Default web browser: Firefox
-		- [ ] Allow Handoff
+		- [off] Allow Handoff
 	- Langauge & Region
 		- Preferred languages: English, Russian
-		- Time format: [x] 24-hour-time
+		- Time format: [on] 24-hour-time
 		- Advanced
 			- General -> Numbers -> Grouping: [space]
 			- General -> Currency -> Grouping: [space]
@@ -39,40 +39,40 @@
 		- Require password immediately after sleep...
 		- FileVault: On, with recovery key.
 		- Firewall: On.
-			- Options -> [ ] Automatically allow signed.
-			- Options -> [x] Stealth mode.
+			- Options -> [off] Automatically allow signed.
+			- Options -> [on] Stealth mode.
 		- Privacy -> Accessibility
-			- [x] ShiftIt
-		- Advanced -> [x] Require an administrator...
+			- [on] ShiftIt
+		- Advanced -> [on] Require an administrator...
 	- Displays
 		- Scaled -> 3rd option
-		- [ ] Automatically adjust brightness
+		- [off] Automatically adjust brightness
 	- Bluetooth
 		- Turn Off
-		- Advanced -> [ ] Open Bluetooth Setup assistant... [both of them].
-	- Networks -> Advanced -> WiFi -> [ ] Remember Networks I have joined
+		- Advanced -> [off] Open Bluetooth Setup assistant... [both of them].
+	- Networks -> Advanced -> WiFi -> [off] Remember Networks I have joined
 	- Extensions
 		- Share menu: Uncheck all.
 		- Widgets: Uncheck all.
 	- Date & time
-		- Date & time -> [x] set date and time automatically: time.nist.gov
-		- Clock -> [x] Display time with seconds.
-		- Clock -> [x] Show date.
+		- Date & time -> [on] set date and time automatically: time.nist.gov
+		- Clock -> [on] Display time with seconds.
+		- Clock -> [on] Show date.
 	- Accessibility -> Display
-		- [x] Reduce transparency
-		- [ ] Shake mouse pointer to locate
+		- [on] Reduce transparency
+		- [off] Shake mouse pointer to locate
 	- Dock
 		- Size: Around 30%?
 		- Position: Left.
 		- Minimize using: Scale effect.
-		- [ ] double click a window's title bar
-		- [x] minimize windows into application icon
-		- [ ] animate opening applications
-		- [ ] show indicators for open applications
+		- [off] double click a window's title bar
+		- [on] minimize windows into application icon
+		- [off] animate opening applications
+		- [off] show indicators for open applications
 	- Mission Control
-		- [ ] Automatically rearrange spaces.
+		- [off] Automatically rearrange spaces.
 		- Shortcuts -> Remove all, except "Mission Control: ^↑".
-	- Spotlight -> [ ] Bing web searches.
+	- Spotlight -> [off] Bing web searches.
 	- Sharing -> Computer Name: laptop
 - Dock -> Remove all applications, launchpad, everything but Trash and Finder, from dock.
 - Firewall
@@ -120,12 +120,12 @@
 		- External disks
 		- CDs, DVDs, and iPods
 	- Advanced:
-		- [x] Show all filename extensions.
-		- [ ] show warning before changing an extension
+		- [on] Show all filename extensions.
+		- [off] show warning before changing an extension
 - Seil
 	- Caps lock to escape, change it to code 53
 - Firefox
-	- General -> [ ] always check if firefox is my default browser
+	- General -> [off] always check if firefox is my default browser
 	- General -> When starts show: blank page
 	- Content -> Fonts & Colors -> Advanced
 		- For: Latin
@@ -138,7 +138,7 @@
 	- Search engine -> DuckDuckGo, delete the rest
 	- Privacy -> Never remember history
 	- Advanced
-		- General -> [x] Warn me when websites try to redirect the page
+		- General -> [on] Warn me when websites try to redirect the page
 		- Data choices -> Uncheck all.
 	- New Tab -> Gear icon -> show blank page
 	- UI Customize: URL, Search, Downloads, Forget, sandwich thing I cannot remove
@@ -146,7 +146,7 @@
 		- uBlock Origin
 			- 3rd-party: Check all, except "Regions, languages"
 - Menu Bar
-	- Battery -> [x] Show Percentage
+	- Battery -> [on] Show Percentage
 - Mathematica
 	- Also extras.
 - Fonts
