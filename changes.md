@@ -102,6 +102,7 @@
 		- `homebrew/dupes/openssh --with-libressl --without-openssl`
 		- `gnupg`
 		- `qemu`
+		- `wget`
 	- See [Redox](#redox) as well.
 - Finder -> Preferences
 	- General
