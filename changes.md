@@ -103,6 +103,7 @@
 		- `gnupg`
 		- `qemu`
 		- `wget`
+		- `rakudo-star`
 	- See [Redox](#redox) as well.
 - Finder -> Preferences
 	- General
