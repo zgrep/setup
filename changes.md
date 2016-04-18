@@ -104,6 +104,9 @@
 		- `qemu`
 		- `wget`
 		- `rakudo-star`
+		- `git`, see below under 'Git' too.
+	- `brew tap osx-cross/avr`
+		- `brew install avr-libc dfu-programmer`
 	- See [Redox](#redox) as well.
 - Finder -> Preferences
 	- General
@@ -178,3 +181,8 @@
 	- `brew install 
 - Misc
 	- `defaults write com.apple.desktopservices DSDontWriteNetworkStores true` to remove pesky `.DS_Store` files
+- App Store
+	- Installed "Pixelmator"
+- Git
+	- `cd /Library/Developer/CommandLineTools/usr/bin; ls | grep git | xargs sudo chmod -x` [(why do this?)](https://rachelbythebay.com/w/2016/04/17/unprotected/)
+	- `brew install git`
