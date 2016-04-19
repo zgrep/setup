@@ -95,6 +95,7 @@
 		- `shiftit`
 		- `the-unarchiver`
 		- `nimbus`
+		- `dash`, see Dash below.
 	- `brew install`
 		- `multirust`
 		- `rc`
@@ -173,6 +174,7 @@
 	- Fix Mac Path
 	- Terminal
 	- Theme - Spacegray
+	- DashDoc
 - `cargo install`
 	- `rustfmt`
 	- `ion-shell`
@@ -180,9 +182,21 @@
 	- `git clone github:redox-os/redox.git --origin upstream --recursive`
 	- `brew install 
 - Misc
-	- `defaults write com.apple.desktopservices DSDontWriteNetworkStores true` to remove pesky `.DS_Store` files
+	- `defaults write com.apple.desktopservices DSDontWriteNetworkStores true` to remove pesky `.DS_Store` files, from some places, at least.
 - App Store
 	- Installed "Pixelmator"
 - Git
 	- `cd /Library/Developer/CommandLineTools/usr/bin; ls | grep git | xargs sudo chmod -x` [(why do this?)](https://rachelbythebay.com/w/2016/04/17/unprotected/)
 	- `brew install git`
+- Dash -> Docsets installed:
+	- Python 2
+	- Python 3
+	- NumPy
+	- C
+	- Haskell
+	- Rust
+	- Go
+	- Man Pages
+	- Vim
+	- Bash
+	- LaTeX
