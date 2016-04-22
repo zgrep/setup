@@ -20,10 +20,6 @@ set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 " Indentation. It's eough for most things.
 filetype plugin indent on
 
-" Swap ; and :
-noremap ; :
-noremap : ;
-
 " Show certain hidden characters.
 set list
 set listchars=tab:>-,nbsp:_,conceal:*
