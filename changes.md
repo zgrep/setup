@@ -91,7 +91,6 @@
 		- `vmware-fusion`
 		- `seil`
 		- `firefox`
-		- `caskroom/versions/sublime-text3`
 		- `shiftit`
 		- `the-unarchiver`
 		- `nimbus`
@@ -106,6 +105,7 @@
 		- `wget`
 		- `rakudo-star`
 		- `git`, see below under 'Git' too.
+		- `neovim/neovim/neovim`
 	- `brew tap osx-cross/avr`
 		- `brew install avr-libc dfu-programmer`
 	- See [Redox](#redox) as well.
@@ -167,20 +167,12 @@
 	- OpenBSD 5.8
 - multirust
 	- `multirust default nightly`
-- Sublime Text 3 -> Installed Packages
-	- Package Control
-	- Rust
-	- Git
-	- Fix Mac Path
-	- Terminal
-	- Theme - Spacegray
-	- DashDoc
 - `cargo install`
 	- `rustfmt`
 	- `ion-shell`
 - Redox
 	- `git clone github:redox-os/redox.git --origin upstream --recursive`
-	- `brew install 
+	- `brew install `... something was going to be here...
 - Misc
 	- `defaults write com.apple.desktopservices DSDontWriteNetworkStores true` to remove pesky `.DS_Store` files, from some places, at least.
 - App Store

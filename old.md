@@ -1,0 +1,11 @@
+- Sublime Text 3 -> Installed Packages
+	- Package Control
+	- Rust
+	- Git
+	- Fix Mac Path
+	- Terminal
+	- Theme - Spacegray
+	- DashDoc
+- Homebrew
+	- `brew cask install`
+		- `caskroom/versions/sublime-text3`
