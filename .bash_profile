@@ -13,8 +13,8 @@ export PS2='$(expr \! - 1 | tr '1234567890' '.').. '
 alias ls='ls -aG'
 
 # Editor variables and alias.
-export EDITOR='subl'
-export VISUAL='subl -w'
+export EDITOR='nvim'
+export VISUAL="$EDITOR"
 alias e="$EDITOR"
 
 # PATH manipulations: rust nightly installed things
