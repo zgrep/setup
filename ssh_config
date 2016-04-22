@@ -9,3 +9,8 @@ Host vps
 	HostName zgrep.org
 	User zgrep
 	IdentityFile ~/.ssh/vps
+
+Host vehk
+	HostName zgrep.org
+	User vehk
+	IdentityFile ~/.ssh/vps

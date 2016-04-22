@@ -1,4 +1,5 @@
 " ~/.config/nvim/init.vim
+
 " Set relative/normal numbering.
 set number
 set relativenumber
