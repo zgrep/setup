@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Get all files.
-f=`ls -ap | grep -vE '\.txt$|\.md$|/$|^copy\.sh$|^\.gitignore$'`;
+f=`ls -ap | grep -vE '\.md$|/$|^copy\.sh$|^\.gitignore$'`;
 
 # For each file:
 for a in $f; do
