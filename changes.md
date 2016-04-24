@@ -22,7 +22,7 @@
 		- Sidebar icon size: Small
 		- Show scroll bars: Always
 		- Click in the scroll bar to: jump to the spot that's clicked.
-		- Default web browser: Firefox
+		- Default web browser: Chromium
 		- [off] Allow Handoff
 	- Langauge & Region
 		- Preferred languages: English, Russian
@@ -90,11 +90,11 @@
 	- `brew cask install`
 		- `vmware-fusion`
 		- `seil`
-		- `firefox`
 		- `shiftit`
 		- `the-unarchiver`
 		- `nimbus`
 		- `dash`, see Dash below.
+		- `chromium`, see Chromium below
 	- `brew install`
 		- `multirust`
 		- `rc`
@@ -130,27 +130,6 @@
 		- [off] show warning before changing an extension
 - Seil
 	- Caps lock to escape, change it to code 53
-- Firefox
-	- General -> [off] always check if firefox is my default browser
-	- General -> When starts show: blank page
-	- Content -> Fonts & Colors -> Advanced
-		- For: Latin
-		- Proportional: Serif
-		- Prop Size: 16
-		- Serif: Merriweather Light
-		- Sans: Fira Sans
-		- Mono: Fira Mono
-		- Mono Size: 16
-	- Search engine -> DuckDuckGo, delete the rest
-	- Privacy -> Never remember history
-	- Advanced
-		- General -> [on] Warn me when websites try to redirect the page
-		- Data choices -> Uncheck all.
-	- New Tab -> Gear icon -> show blank page
-	- UI Customize: URL, Search, Downloads, Forget, sandwich thing I cannot remove
-	- Addons
-		- uBlock Origin
-			- 3rd-party: Check all, except "Regions, languages"
 - Menu Bar
 	- Battery -> [on] Show Percentage
 - Mathematica
@@ -192,3 +171,22 @@
 	- Vim
 	- Bash
 	- LaTeX
+- Chromium -> Settings
+	- Search -> DuckDuckGo, delete everything else
+	- People -> [off] Let anyone add a person to Chrome
+	- Privacy
+		- Content Settings
+			- Plugins -> Let me choose when to run plugin content
+			- Notifications -> Manage exceptions -> "irccloud.com" allow
+			- Unsandboxed plugin access -> Do not allow any sites to use ...
+			- Automatic downloads -> Do not allow any site to download multiple files automatically
+		- [off] use a web service to help resolve navigation errors
+		- [off] use a prediction service to help complete searches
+		- [off] enable autofill
+		- [off] offer to save your web passwords
+	- Languages -> Add Russian
+	- Addons
+		- uBlock Origin
+			- 3rd-party: Check all, except "Regions, languages"
+
+` vim: set noexpandtab: `
