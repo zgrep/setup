@@ -95,10 +95,14 @@
 		- `nimbus`
 		- `dash`, see Dash below.
 		- `chromium`, see Chromium below
+		- `private-internet-access`
+		- `android-file-transer`
+		- `appcleaner`
 	- `brew install`
 		- `multirust`
 		- `rc`
 		- `python`
+		- `python3`
 		- `homebrew/dupes/openssh --with-libressl --without-openssl`
 		- `gnupg`
 		- `qemu`
@@ -106,6 +110,8 @@
 		- `rakudo-star`
 		- `git`, see below under 'Git' too.
 		- `neovim/neovim/neovim`
+		- `ghc`
+		- `haskell-stack`
 	- `brew tap osx-cross/avr`
 		- `brew install avr-libc dfu-programmer`
 	- See [Redox](#redox) as well.
