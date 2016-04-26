@@ -22,3 +22,6 @@ export PATH="$PATH:~/.multirust/toolchains/nightly/cargo/bin"
 
 # For secrets and whatnot.
 source ~/.bash_profile_secret
+
+# Damn you, homebrew.
+export HOMEBREW_NO_ANALYTICS=1

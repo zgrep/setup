@@ -27,3 +27,6 @@ path = ( `{ cat /etc/paths } $home/.multirust/toolchains/nightly/cargo/bin )
 
 # For secrets and whatnot.
 . $home/.rcrcsecret
+
+# Damn you, homebrew.
+HOMEBREW_NO_ANALYTICS = 1
