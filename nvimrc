@@ -9,7 +9,7 @@ set clipboard=unnamed
 
 " Make line numbers colorless if they're not the line I'm on.
 highlight LineNr ctermfg=none
-highlight CursorLineNr ctermfg=yellow
+highlight CursorLineNr ctermfg=blue
 
 " Syntax coloring on.
 syntax on

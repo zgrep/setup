@@ -25,3 +25,6 @@ source ~/.bash_profile_secret
 
 # Damn you, homebrew.
 export HOMEBREW_NO_ANALYTICS=1
+
+# Matlab
+alias matlab="/Applications/MATLAB_*.app/bin/matlab -nodesktop -nosplash -nojvm -nodisplay"
