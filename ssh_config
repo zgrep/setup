@@ -10,7 +10,17 @@ Host vps
 	User zgrep
 	IdentityFile ~/.ssh/vps
 
-Host vehk
+Host zvehk
 	HostName zgrep.org
 	User vehk
 	IdentityFile ~/.ssh/vps
+
+Host vehk
+    HostName vehk.de
+    User zgrep
+    IdentityFile ~/.ssh/vehk
+
+Host gibson
+    HostName 192.168.1.200
+    User root
+    IdentityFile ~/.ssh/gibson

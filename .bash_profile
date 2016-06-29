@@ -27,4 +27,4 @@ source ~/.bash_profile_secret
 export HOMEBREW_NO_ANALYTICS=1
 
 # Matlab
-alias matlab="/Applications/MATLAB_*.app/bin/matlab -nodesktop -nosplash -nojvm -nodisplay"
+alias matlab="/Applications/MATLAB_*.app/bin/matlab -nodesktop -nosplash"
