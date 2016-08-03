@@ -16,8 +16,9 @@ for a in $f; do
 	a=`pwd`/"$a";
 	# Remove if it exists.
 	if [[ -e "$b" ]]; then rm "$b"; fi;
-	# Hey, I wanna see what it's doing! :P
-	echo "cp '$a' '$b'";
-	# Copies the file over. For symlinks, replace 'cp' with 'ln -s'.
-	cp "$a" "$b";
+	# Prepares the copy command. For symlinks, replace 'cp' with 'ln -s'.
+    # For linux... uh... try flip-flopping the order? Stuff's weird.
+    c = "cp '$a' '$b'";
+	# Hey, I wanna see what it's doing! And then I wanna do it!
+	echo "$c"; $c;
 done;
