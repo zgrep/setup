@@ -25,3 +25,8 @@ Host gibson
     HostName 192.168.1.200
     User root
     IdentityFile ~/.ssh/gibson
+
+Host lain
+    HostName lain.lambdaos.org
+    User zgrep
+    IdentityFile ~/.ssh/heddwch
