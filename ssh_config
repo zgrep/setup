@@ -18,6 +18,7 @@ Host zvehk
 Host vehk
     HostName vehk.de
     User zgrep
+    Port 2222
     IdentityFile ~/.ssh/vehk
 
 Host gibson

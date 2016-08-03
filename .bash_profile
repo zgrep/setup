@@ -10,7 +10,7 @@ export PS1='$([ $? == 0 ] || echo "\[\033[0;31m\]$? ")\[\033[0;34m\]\u@\H \[\033
 export PS2='$(expr \! - 1 | tr '1234567890' '.').. '
 
 # Colored ls that shows hidden files.
-alias ls='ls -aG'
+alias ls='ls -a --color=auto'
 
 # Editor variables and alias.
 export EDITOR='nvim'
@@ -28,3 +28,7 @@ export HOMEBREW_NO_ANALYTICS=1
 
 # Matlab
 alias matlab="/Applications/MATLAB_*.app/bin/matlab -nodesktop -nosplash"
+
+# History
+export HISTCONTROL=ignoredups:erasedups  
+shopt -s histappend
