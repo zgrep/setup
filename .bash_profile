@@ -32,3 +32,6 @@ alias matlab="/Applications/MATLAB_*.app/bin/matlab -nodesktop -nosplash"
 # History
 export HISTCONTROL=ignoredups:erasedups  
 shopt -s histappend
+
+# Damn you, bash.
+alias time='command time'
