@@ -30,3 +30,13 @@ Host lain
     HostName lain.lambdaos.org
     User zgrep
     IdentityFile ~/.ssh/heddwch
+
+Host norttgif
+    HostName 104.131.176.93
+    User root
+    IdentityFile ~/.ssh/drop
+
+Host simplyroot
+    HostName 198.211.105.21
+    User root
+    IdentityFile ~/.ssh/drop
