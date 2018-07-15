@@ -1,5 +1,3 @@
-# ~/.bash_profile
-
 # If return code isn't 0, a nice red color and show it to me, please.
 # Then give me user@host. Then my current directory.
 # And finally, the history number of the command, and the $ or # symbol.
@@ -13,21 +11,9 @@ export PS2='$(expr \! - 1 | tr '1234567890' '.').. '
 alias ls='ls -a --color=auto'
 
 # Editor variables and alias.
-export EDITOR='nvim'
+export EDITOR='vim'
 export VISUAL="$EDITOR"
 alias e="$EDITOR"
-
-# PATH manipulations: rust nightly installed things
-export PATH="$PATH:~/.multirust/toolchains/nightly/cargo/bin"
-
-# For secrets and whatnot.
-source ~/.bash_profile_secret
-
-# Damn you, homebrew.
-export HOMEBREW_NO_ANALYTICS=1
-
-# Matlab
-alias matlab="/Applications/MATLAB_*.app/bin/matlab -nodesktop -nosplash"
 
 # History
 export HISTCONTROL=ignoredups:erasedups  
@@ -35,3 +21,7 @@ shopt -s histappend
 
 # Damn you, bash.
 alias time='command time'
+
+# k
+# alias ok='~/vers/ok/repl.js'
+# alias k='rlwrap ~/down/k'

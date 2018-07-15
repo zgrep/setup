@@ -1,5 +1,3 @@
-" ~/.config/nvim/init.vim
-
 " Set relative/normal numbering.
 set number
 set relativenumber
@@ -26,6 +24,3 @@ set listchars=tab:>-,nbsp:_,conceal:*
 
 " Wrap text onto next line nicely.
 set linebreak
-
-" Count sentences command.
-command! -nargs=? CountSentences execute '<args>s/\[\.\]\|\.[ "]\|\.$//gn|noh'
