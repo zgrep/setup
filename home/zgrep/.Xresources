@@ -1,11 +1,12 @@
 Xft.dpi: 192
 Xcursor.theme: Adwaita
 Xcursor.size: 32
+
 URxvt*font: xft:DejaVu Sans Mono:size=9
 URxvt*scrollBar: false
 URXvt*saveLines: 5000
 URXvt*urgentOnBell: true
 
-!XTerm*renderFont: true
-!XTerm*faceName: DejaVu Sans Mono
-!XTerm*faceSize: 9
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
