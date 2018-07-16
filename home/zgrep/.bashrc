@@ -14,6 +14,7 @@ alias ls='ls -a --color=auto'
 export EDITOR='vim'
 export VISUAL="$EDITOR"
 alias e="$EDITOR"
+export PAGER='less'
 
 # History
 export HISTCONTROL=ignoredups:erasedups  
