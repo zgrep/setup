@@ -1,16 +1,19 @@
 acct
 adwaita-icon-theme
 alpine-base
+alpine-sdk
 alsa-utils
 bash
 bash-doc
 borgbackup
+curl
 dbus-x11
 dmenu
 doas
 eudev
 firefox
 font-noto
+ghostscript
 git
 gnupg
 gummiboot
@@ -18,6 +21,7 @@ i3lock
 i3status
 i3wm
 i3wm-doc
+less
 linux-vanilla
 mdocml
 mpv
