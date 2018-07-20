@@ -1,0 +1,12 @@
+#!/bin/sh
+
+doas=/usr/bin/doas
+
+if [ "$*" = '-i' ]; then
+    $doas "$SHELL"
+elif [ "$1" = '-e' ]; then
+    shift
+    $doas "$EDITOR" "$@"
+else
+    $doas "$@"
+fi
