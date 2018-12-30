@@ -1,7 +1,0 @@
-# ~/.gitconfig
-
-[user]
-	name = zgrep
-	email = zgrep@users.noreply.github.com
-[push]
-	default = simple

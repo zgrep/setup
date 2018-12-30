@@ -1,8 +1,0 @@
-#!/bin/sh
-
-source /sys/class/power_supply/BAT0/uevent
-
-if [ "$POWER_SUPPLY_CAPACITY" -le 12 ] && [ "$POWER_SUPPLY_STATUS" == 'Discharging' ]; then
-    # While this is _not supported_ by i3, this works exactly the way I want it to.
-    DISPLAY=:0 i3-nagbar -t warning -m "Battery is discharging and at $POWER_SUPPLY_CAPACITY%. Connect your charger now."
-fi
