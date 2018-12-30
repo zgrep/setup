@@ -167,14 +167,14 @@ in {
     allowUnfree = true;
   };
   environment.systemPackages = (with pkgs; [
-    maim xdotool rsync file nmap openssh git neovim htop gnupg smartmontools qemu rlwrap xsel tree
-    mpv firefox gimp darktable mathematica
+    rsync nmap openssh git neovim gnupg smartmontools qemu
+    file htop tree hexd pixd xsel maim xdotool rlwrap
+    mpv firefox gimp darktable mypaint mathematica
+    gummi texlive.combined.scheme-full
     signal-desktop quasselClient
     python3 ghc jq dash nodejs
-    xonotic
-    nix-index
-    gummi texlive.combined.scheme-full
     virtualbox arduino
+    nix-index
   ]) ++ (with pkgs.gnome3; [
     gnome-terminal gnome-disk-utility
     gnome-logs gnome-system-log
