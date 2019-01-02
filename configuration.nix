@@ -10,6 +10,9 @@ in {
       ./private.nix # User passwords, extraHosts, etc. Mainly just what I didn't want public.
     ];
 
+  # Maybe this is important. Maybe not.
+  hardware.cpu.intel.updateMicrocode = true;
+
   # EFI boot with encrypted ZFS.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -169,7 +172,7 @@ in {
   environment.systemPackages = (with pkgs; [
     rsync nmap openssh git neovim gnupg smartmontools qemu
     file htop tree hexd pixd xsel maim xdotool rlwrap
-    mpv firefox gimp darktable mypaint mathematica
+    zeal mpv firefox gimp darktable mypaint mathematica
     gummi texlive.combined.scheme-full
     signal-desktop quasselClient
     python3 ghc jq dash nodejs
