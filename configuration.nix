@@ -170,12 +170,15 @@ in {
     allowUnfree = true;
   };
   environment.systemPackages = (with pkgs; [
-    rsync nmap openssh git neovim gnupg smartmontools qemu
+    rsync openssh git neovim gnupg smartmontools qemu
+    nmap tcpdump dnsutils
     file htop tree hexd pixd xsel maim xdotool rlwrap
-    zeal mpv firefox gimp darktable mypaint mathematica
-    gummi texlive.combined.scheme-full
+    latinmodern-math lmodern gummi texlive.combined.scheme-full
     signal-desktop quasselClient
-    python3 ghc jq dash nodejs
+    gimp darktable krita 
+    zeal mpv firefox
+    mathematica
+    python3 ghc jq dash nodejs racket
     virtualbox arduino
     nix-index
   ]) ++ (with pkgs.gnome3; [
