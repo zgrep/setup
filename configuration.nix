@@ -154,7 +154,7 @@ in {
 
   # Printing.
   services.printing.enable = true;
-  services.printing.drivers = with pkgs; [ gutenprint gutenprintBin ];
+  services.printing.drivers = with pkgs; [ gutenprint gutenprintBin hplip hplipWithPlugin ];
 
   # My users.
   security.sudo.enable = true;
@@ -169,18 +169,20 @@ in {
   nixpkgs.config = {
     allowUnfree = true;
   };
+
   environment.systemPackages = (with pkgs; [
-    rsync openssh git neovim gnupg smartmontools qemu
-    nmap tcpdump dnsutils
+    rsync openssh git pijul neovim gnupg smartmontools qemu
+    nmap tcpdump dnsutils traceroute
     file htop tree hexd pixd xsel maim xdotool rlwrap
     latinmodern-math lmodern gummi texlive.combined.scheme-full
     signal-desktop quasselClient
     gimp darktable krita 
     zeal mpv firefox
-    mathematica
+    mathematica jupyter
     python3 ghc jq dash nodejs racket
-    virtualbox arduino
-    nix-index
+    virtualbox # arduino
+    nix-index # plover.dev
+    gnuradio gqrx gnuradio-osmosdr gqrx rtl-sdr
   ]) ++ (with pkgs.gnome3; [
     gnome-terminal gnome-disk-utility
     gnome-logs gnome-system-log
@@ -191,6 +193,9 @@ in {
     gnome-font-viewer gnome-characters gnome-screenshot
     gnome-clocks gnome-weather
   ]);
+
+  # RTL-SDR
+  services.udev.packages = [ pkgs.rtl-sdr ];
 
   # Package comfort.
   nixpkgs.config.packageOverrides = pkgs: with pkgs; {
