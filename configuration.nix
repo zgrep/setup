@@ -21,7 +21,7 @@ in {
 
   # Virtualization.
   boot.kernelModules = [ "kvm-intel" ];
-  virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enable = true;
 
   # ZFS services.
   services.zfs.autoSnapshot.enable = true;
@@ -113,6 +113,12 @@ in {
         [org.gnome.desktop.interface]
         clock-show-seconds=true
   
+        [org.gnome.shell.overrides]
+        dynamic-workspaces=false
+
+        [org.gnome.desktop.wm.preferences]
+        num-workspaces=9
+
         [org.gnome.desktop.wm.keybindings]
         move-to-workspace-1=['<Super><Shift>1']
         move-to-workspace-2=['<Super><Shift>2']
@@ -171,31 +177,32 @@ in {
   };
 
   environment.systemPackages = (with pkgs; [
-    rsync openssh git pijul neovim gnupg smartmontools qemu
+    rsync openssh git neovim gnupg smartmontools # qemu pijul 
     nmap tcpdump dnsutils traceroute
     file htop tree hexd pixd xsel maim xdotool rlwrap
     latinmodern-math lmodern gummi texlive.combined.scheme-full
     signal-desktop quasselClient
-    gimp darktable krita 
-    zeal mpv firefox
-    mathematica jupyter
-    python3 ghc jq dash nodejs racket
-    virtualbox # arduino
+    # gimp darktable krita # Harumph.
+    mpv firefox # zeal
+    # mathematica jupyter # I don't _really_ need either of these. Probably.
+    python3 ghc jq dash nodejs racket # All the languages!
+    # virtualbox # arduino
     nix-index # plover.dev
-    gnuradio gqrx gnuradio-osmosdr gqrx rtl-sdr
+    # gnuradio gqrx gnuradio-osmosdr gqrx rtl-sdr
   ]) ++ (with pkgs.gnome3; [
     gnome-terminal gnome-disk-utility
-    gnome-logs gnome-system-log
+    # gnome-logs gnome-system-log
     gnome-power-manager simple-scan
     nautilus file-roller
     eog evince
-    baobab gnome-system-monitor gnome-session
-    gnome-font-viewer gnome-characters gnome-screenshot
-    gnome-clocks gnome-weather
+    gnome-session
+    # baobab gnome-system-monitor
+    gnome-screenshot # gnome-characters gnome-font-viewer
+    # gnome-clocks gnome-weather
   ]);
 
   # RTL-SDR
-  services.udev.packages = [ pkgs.rtl-sdr ];
+  # services.udev.packages = [ pkgs.rtl-sdr ];
 
   # Package comfort.
   nixpkgs.config.packageOverrides = pkgs: with pkgs; {
