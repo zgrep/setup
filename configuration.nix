@@ -47,4 +47,5 @@
     latinmodern-math lmodern
   ];
 
+  programs.adb.enable = true;
 }
