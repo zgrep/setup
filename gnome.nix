@@ -22,17 +22,11 @@ in {
                 remove-old-trash-files=true
                 report-technical-problems=false
 
-                [org.gnome.settings-daemon.plugins.color]
-                night-light-enabled=true
-
                 [org.gnome.desktop.search-providers]
                 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop']
                 disabled=['org.gnome.clocks.desktop']
                 disable-external=false
                 enabled=['org.gnome.Characters.desktop']
-
-                [org.gnome.desktop.wm.preferences]
-                focus-mode='sloppy'
 
                 [org.gnome.nautilus.preferences]
                 search-view='list-view'
@@ -66,25 +60,35 @@ in {
         };
     };
 
-    environment.gnome3.excludePackages = pkgs.gnome3.optionalPackages;
+    services.gnome3.core-os-services.enable = true;
+    services.gnome3.core-shell.enable = true;
+    services.gnome3.core-utilities.enable = true;
+    services.gnome3.games.enable = false;
     services.geoclue2.enable = mkForce false;
     services.dleyna-renderer.enable = mkForce false;
     services.dleyna-server.enable = mkForce false;
     services.gnome3.at-spi2-core.enable = mkForce false;
     services.gnome3.evolution-data-server.enable = mkForce false;
-    services.gnome3.gnome-documents.enable = mkForce false;
+    programs.gnome-documents.enable = mkForce false;
     services.gnome3.gnome-online-accounts.enable = mkForce false;
     services.gnome3.gnome-user-share.enable = mkForce false;
-    services.gnome3.seahorse.enable = mkForce false;
+    programs.seahorse.enable = mkForce false;
+    services.avahi.enable = mkForce false;
     services.telepathy.enable = mkForce false;
 
+    environment.gnome3.excludePackages = (with pkgs.gnome3; [
+      cheese epiphany geary gedit gnome-calculator
+      gnome-clocks
+      gnome-contacts
+      gnome-font-viewer
+      yelp totem gnome-weather
+      gnome-software gnome-photos gnome-music
+      gnome-maps gnome-logs
+    ]);
+
     environment.systemPackages = (with pkgs.gnome3; [
-        gnome-terminal gnome-disk-utility
-        gnome-power-manager simple-scan
-        nautilus file-roller
-        eog evince
+        gnome-power-manager
         gnome-session
-        gnome-screenshot
         networkmanagerapplet
         dconf-editor
     ]);
