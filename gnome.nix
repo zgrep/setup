@@ -56,6 +56,17 @@ in {
                 switch-to-workspace-8=['<Super>8']
                 switch-to-workspace-9=['<Super>9']
                 switch-to-workspace-10=['<Super>0']
+
+                [org.gnome.shell.keybindings]
+                switch-to-application-1=[]
+                switch-to-application-2=[]
+                switch-to-application-3=[]
+                switch-to-application-4=[]
+                switch-to-application-5=[]
+                switch-to-application-6=[]
+                switch-to-application-7=[]
+                switch-to-application-8=[]
+                switch-to-application-9=[]
             '';
         };
     };
