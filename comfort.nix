@@ -2,7 +2,7 @@
 
 {
   environment.variables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
     PAGER = "less";
   };
 
@@ -35,12 +35,11 @@
     '';
   };
 
-  environment.systemPackages = with pkgs; [ vim ];
+  environment.systemPackages = with pkgs; [ neovim ];
 
   nixpkgs.config.packageOverrides = pkgs: with pkgs; {
-    vim = vim_configurable.customize {
-      name = "vim";
-      vimrcConfig.customRC = ''
+    neovim = neovim.override {
+      configure.customRC = ''
         " Set relative/normal numbering.
         set number
         set relativenumber

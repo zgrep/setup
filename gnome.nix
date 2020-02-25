@@ -5,7 +5,11 @@ let
 in {
     services.xserver = {
         enable = true;
+        layout = "us";
+        xkbVariant = "dvorak";
+        xkbOptions = "caps:escape,compose:ralt";
         displayManager.gdm.enable = true;
+        desktopManager.xterm.enable = mkForce false;
         desktopManager.gnome3 = {
             enable = true;
             extraGSettingsOverrides = ''
@@ -13,14 +17,15 @@ in {
                 natural-scroll=false
                 click-method='areas'
 
-                [org.gnome.desktop.interface]
-                clock-show-date=true
-
                 [org.gnome.desktop.privacy]
                 recent-files-max-age=7
                 old-files-age=uint32 7
                 remove-old-trash-files=true
                 report-technical-problems=false
+                send-software-usage-stats=false
+                disable-camera=true
+                disable-microphone=true
+                hide-identity=true
 
                 [org.gnome.desktop.search-providers]
                 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop']
@@ -31,9 +36,36 @@ in {
                 [org.gnome.nautilus.preferences]
                 search-view='list-view'
                 default-folder-viewer='list-view'
+                show-create-link=true
+                search-filter-time-type='last_modified'
+
+                [org.gnome.nautilus.list-view]
+                default-column-order=['name', 'size', 'detailed_type', 'type', 'owner', 'group', 'permissions', 'where', 'date_modified', 'date_modified_with_time', 'date_accessed', 'recency', 'starred']
+                default-visible-columns=['name', 'size', 'detailed_type', 'date_modified_with_time', 'date_accessed', 'owner', 'group', 'permissions']
+                default-zoom-level='small'
 
                 [org.gnome.desktop.interface]
+                clock-show-date=true
                 clock-show-seconds=true
+                clock-show-weekday=true
+                gtk-enable-primary-paste=false
+                show-battery-percentage=true
+                text-scaling-factor=0.92000000000000004
+                monospace-font-name='Source Code Pro 11'
+                document-font-name='Cantarell 11'
+                font-name='Cantarell 11'
+                gtk-im-module='gtk-im-context-simple'
+                gtk-theme='Adementary'
+                icon-theme='Adwaita'
+
+                [org.gnome.desktop.wm.preferences]
+                num-workspaces=10
+
+                [org.gnome.mutter]
+                attach-modal-dialogs=true
+                dynamic-workspaces=false
+                edge-tiling=true
+                workspaces-only-on-primary=true
 
                 [org.gnome.desktop.wm.keybindings]
                 move-to-workspace-1=['<Super><Shift>1']
@@ -67,6 +99,10 @@ in {
                 switch-to-application-7=[]
                 switch-to-application-8=[]
                 switch-to-application-9=[]
+
+                [org.gnome.settings-daemon.plugins.xsettings]
+                antialiasing='rgba'
+                hinting='full'
             '';
         };
     };
@@ -102,5 +138,6 @@ in {
         gnome-session
         networkmanagerapplet
         dconf-editor
-    ]);
+        gnome-tweaks
+    ]) ++ [ pkgs.adementary-theme ];
 }

@@ -1,50 +1,66 @@
-{ config, pkgs, lib, ... }:
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
+# and in the NixOS manual (accessible by running ‘nixos-help’).
+
+{ config, pkgs, ... }:
 
 {
-  imports = [
-    ./hardware-configuration.nix
-    ./gnome.nix
-    ./comfort.nix
-    ./yubikey.nix
-    ./users.nix
+  imports =
+    [ # Include the results of the hardware scan.
+      ./hardware-configuration.nix
+      ./gnome.nix
+      ./comfort.nix
+      ./users.nix
     ];
 
-  hardware.cpu.intel.updateMicrocode = true;
-  services.fwupd.enable = true;
-
+  # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ config.boot.kernelPackages.exfat-nofuse ];
+  # Proprietary bullshit.
+  hardware.cpu.intel.updateMicrocode = true;
+  services.fwupd.enable = true;
 
-  time.timeZone = "America/New_York";
+  networking.hostName = "illegal-uturn"; # Define your hostname.
+
+  # Select internationalisation properties.
   i18n = {
+    consoleFont = "Lat2-Terminus16";
     consoleKeyMap = "dvorak";
     defaultLocale = "en_US.UTF-8";
   };
 
-  hardware.bluetooth.enable = lib.mkForce false;
+  # Set your time zone.
+  time.timeZone = "America/New_York";
 
+  # Printing.
   services.printing.enable = true;
   services.printing.drivers = with pkgs; [ gutenprint hplip ];
+  hardware.sane.enable = true;
 
+  # Packages.
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    rsync openssh git gnupg smartmontools fwupd
+    rsync openssh git gnupg wget
+    smartmontools fwupd
     nmap tcpdump dnsutils traceroute pciutils usbutils
     file htop tree hexd pixd rlwrap mkpasswd unar
     gummi texlive.combined.scheme-full
     signal-desktop quasselClient
     gimp inkscape mpv firefox
-    python3 ghc jq dash nodejs racket
+    ghc jq dash nodejs racket
+    (python3.withPackages (ps: with ps; [ numpy scipy matplotlib pillow ]))
     nix-index patchelf
-    sublime3 openvpn
     musescore
-    xournal
-    # mathematica jupyter plover.dev qemu pijul
-  ] ++ (with python3Packages; [ numpy scipy matplotlib pillow ]);
+    plover.dev
+    radare2-cutter hopper
+    virtmanager qemu libguestfs
+    openvpn
+    sublime3
+  ];
+
+  programs.ssh.startAgent = false;
 
   fonts.enableDefaultFonts = true;
   fonts.fonts = with pkgs; [
@@ -53,5 +69,8 @@
 
   programs.adb.enable = true;
 
-  system.stateVersion = "19.09";
+  virtualisation.libvirtd.enable = true;
+
+  system.stateVersion = "19.09"; # Almost never change.
 }
+
