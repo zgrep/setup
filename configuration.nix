@@ -1,13 +1,9 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    [
+      ./hardware.nix
       ./gnome.nix
       ./comfort.nix
       ./users.nix
@@ -17,11 +13,17 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # All the filesystems, since I don't know where else to add them.
+  boot.supportedFilesystems = [ "ntfs" "exfat" "ext4" "vfat" "ext3" "ext2" "zfs" ];
+
+  # For ZFS.
+  networking.hostId = "b05abbf2";
+
   # Proprietary bullshit.
   hardware.cpu.intel.updateMicrocode = true;
   services.fwupd.enable = true;
 
-  networking.hostName = "illegal-uturn"; # Define your hostname.
+  networking.hostName = "asbestos"; # Define your hostname.
 
   # Select internationalisation properties.
   i18n = {
@@ -32,6 +34,9 @@
 
   # Set your time zone.
   time.timeZone = "America/New_York";
+
+  # No bluetooth.
+  hardware.bluetooth.enable = false;
 
   # Printing.
   services.printing.enable = true;
@@ -58,17 +63,27 @@
     virtmanager qemu libguestfs
     openvpn
     sublime3
+    remmina
+    gsmartcontrol
+    (aspellWithDicts (ps: with ps; [ en en-computers en-science ]))
   ];
 
+  # SSH.
   programs.ssh.startAgent = false;
+  programs.ssh.extraConfig = ''
+    IdentitiesOnly yes
+  '';
 
+  # Fonts!
   fonts.enableDefaultFonts = true;
   fonts.fonts = with pkgs; [
     latinmodern-math lmodern
   ];
 
+  # Android.
   programs.adb.enable = true;
 
+  # Virtualization.
   virtualisation.libvirtd.enable = true;
 
   system.stateVersion = "19.09"; # Almost never change.

@@ -7,12 +7,22 @@ in {
         enable = true;
         layout = "us";
         xkbVariant = "dvorak";
-        xkbOptions = "caps:escape,compose:ralt";
+        xkbOptions = "caps:escape,compose:prsc";
         displayManager.gdm.enable = true;
         desktopManager.xterm.enable = mkForce false;
         desktopManager.gnome3 = {
             enable = true;
             extraGSettingsOverrides = ''
+                [org.gnome.desktop.media-handling]
+                automount=false
+                automount-open=false
+
+                [org.gnome.desktop.media-handling]
+                autorun-never=true
+                autorun-x-content-ignore=@as []
+                autorun-x-content-open-folder=@as []
+                autorun-x-content-start-app=@as []
+
                 [org.gnome.desktop.peripherals.touchpad]
                 natural-scroll=false
                 click-method='areas'
@@ -33,6 +43,16 @@ in {
                 disable-external=false
                 enabled=['org.gnome.Characters.desktop']
 
+                [org.gnome.shell]
+                enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'nohotcorner@azuri.free.fr']
+                remember-mount-password=false
+
+                [org.gnome.shell.extensions.caffeine]
+                enable-fullscreen=false
+                inhibit-apps=@as []
+                show-notifications=false
+                user-enabled=false
+
                 [org.gnome.nautilus.preferences]
                 search-view='list-view'
                 default-folder-viewer='list-view'
@@ -50,13 +70,13 @@ in {
                 clock-show-weekday=true
                 gtk-enable-primary-paste=false
                 show-battery-percentage=true
-                text-scaling-factor=0.92000000000000004
                 monospace-font-name='Source Code Pro 11'
                 document-font-name='Cantarell 11'
                 font-name='Cantarell 11'
                 gtk-im-module='gtk-im-context-simple'
                 gtk-theme='Adementary'
                 icon-theme='Adwaita'
+                enable-animations=true
 
                 [org.gnome.desktop.wm.preferences]
                 num-workspaces=10
@@ -139,5 +159,9 @@ in {
         networkmanagerapplet
         dconf-editor
         gnome-tweaks
-    ]) ++ [ pkgs.adementary-theme ];
+    ]) ++ (with pkgs; [ 
+        adementary-theme
+        gnomeExtensions.caffeine
+        gnomeExtensions.nohotcorner
+    ]);
 }

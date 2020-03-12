@@ -74,6 +74,9 @@
         " No mode line, I guess.
         set modelines=0
         set nomodeline
+
+        " I have a light terminal background.
+        set background=light
       '';
     };
   };
