@@ -65,6 +65,7 @@ in {
                 default-zoom-level='small'
 
                 [org.gnome.desktop.interface]
+                enable-hot-corners=false
                 clock-show-date=true
                 clock-show-seconds=true
                 clock-show-weekday=true
@@ -131,6 +132,7 @@ in {
     services.gnome3.core-shell.enable = true;
     services.gnome3.core-utilities.enable = true;
     services.gnome3.games.enable = false;
+    services.gnome3.gnome-keyring.enable = mkForce false;
     services.geoclue2.enable = mkForce false;
     services.dleyna-renderer.enable = mkForce false;
     services.dleyna-server.enable = mkForce false;
@@ -144,9 +146,8 @@ in {
     services.telepathy.enable = mkForce false;
 
     environment.gnome3.excludePackages = (with pkgs.gnome3; [
-      cheese epiphany geary gedit gnome-calculator
+      cheese epiphany gnome-contacts geary gedit gnome-calculator
       gnome-clocks
-      gnome-contacts
       gnome-font-viewer
       yelp totem gnome-weather
       gnome-software gnome-photos gnome-music
@@ -162,6 +163,5 @@ in {
     ]) ++ (with pkgs; [ 
         adementary-theme
         gnomeExtensions.caffeine
-        gnomeExtensions.nohotcorner
     ]);
 }
