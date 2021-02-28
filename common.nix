@@ -1,6 +1,16 @@
-{ config, pkgs, ... }:
+# Common things I'll want on servers, desktops, laptop, etc.
+
+{ config, pkgs, modulesPath, ... }:
 
 {
+  # Hardened options, though not just yet. They seem to break too much. :(
+  # imports = [ (modulesPath + "/profiles/hardened.nix") ];
+
+  i18n.defaultLocale = "en_US.UTF-8";
+
+  # Just in case.
+  networking.firewall.enable = true;
+
   environment.variables = {
     EDITOR = "nvim";
     PAGER = "less";
@@ -54,11 +64,9 @@
         " Syntax coloring on.
         syntax on
 
-        " Spaces by default.
-        set expandtab tabstop=4 shiftwidth=4 softtabstop=4
-
-        " Indentation. It's eough for most things.
+        " Spaces and indentation.
         filetype plugin indent on
+        set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
         " Show certain hidden characters.
         set list

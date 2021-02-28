@@ -1,0 +1,5 @@
+poincare-secret.nix
+hilbert-secret.nix
+syncthing.nix
+users.nix
+flake.lock
